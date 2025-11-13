@@ -118,9 +118,9 @@ public class Child {
 		if (endposX >= EAST || endposX <= WEST || endposY >= NORTH || endposY <= SOUTH) {
 			return false;
 		}
+		totalTraveled += distance(posX, posY, endposX, endposY);
 		posX = endposX;
 		posY = endposY;
-		totalTraveled += distance(posX, posY, endposX, endposY);
 		
 		
 		return true;
@@ -191,7 +191,7 @@ public class Child {
 		}
 		return -1;
 	}
-	//distance
+	//distance formula. I would have made this public static but the instructions say to make everything else (including this) private
 	private double distance(double startposX, double startposY, double endposX, double endposY) {
 		double posXDiff = Math.max(endposX, startposX) - Math.min(endposX, startposX);
 		double posYDiff = Math.max(endposY, startposY) - Math.min(startposY, endposY);
@@ -240,4 +240,3 @@ public class Child {
 
 
 
-d
